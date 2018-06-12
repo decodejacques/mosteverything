@@ -1,10 +1,10 @@
-var expect = require('chai').expect;
+let expect = require('chai').expect;
 
-var classes = require('../src/problem2.js');
+let classes = require('../src/problem2.js');
 
-var Shape = classes.Shape;
-var Square = classes.Square;
-var s = new Square(5);
+let Shape = classes.Shape;
+let Square = classes.Square;
+let s = new Square(5);
 
 describe('Square', function() {
     it('converts nicely to a string', function() {

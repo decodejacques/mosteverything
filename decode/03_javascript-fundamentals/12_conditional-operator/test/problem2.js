@@ -1,10 +1,10 @@
-var expect = require('chai').expect;
+let expect = require('chai').expect;
 
-var funcs = require('../src/problem2.js');
+let funcs = require('../src/problem2.js');
 
 
-var fs = require('fs')
-var source = fs.readFileSync(__dirname + '/../src/problem2.js').toString();
+let fs = require('fs')
+let source = fs.readFileSync(__dirname + '/../src/problem2.js').toString();
 
 describe('source file', function() {
     it('source file should not contain the conditional operator', function() {

@@ -1,8 +1,8 @@
-var expect = require('chai').expect;
+let expect = require('chai').expect;
 
 
 
-var t = require('../src/problem1.js');
+let t = require('../src/problem1.js');
 
 describe('anonymous functions', function() {
     it('', function() {

@@ -4,7 +4,7 @@ function process(httpRequest) {
 
 // IGNORE EVERYTHING AFTER THIS LINE!!!!!
 
-var net = require('net');
+let net = require('net');
 function makeResponse(contentType, x) {
     return `
 HTTP/1.1 200 OK
@@ -20,7 +20,7 @@ ${x}`
 function createServer(f) {
     net.createServer(function (sock) {
         sock.on('data', function (data) {
-            var httpResponse = f(data.toString());
+            let httpResponse = f(data.toString());
             if(!httpResponse) httpResponse = "";
             sock.write(httpResponse);
         });

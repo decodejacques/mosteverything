@@ -13,8 +13,8 @@ function detective(i) {
 }
 
 function assignFlight(name) {
-    var flightNumber = ((name.length * 7) % 20) + "0";
-    var terrorSuspects = ["bob", "eric", "susie"];
+    let flightNumber = ((name.length * 7) % 20) + "0";
+    let terrorSuspects = ["bob", "eric", "susie"];
     // if the name is a terror suspect, throw an exception
     // Otherwise, return the flight number
 }

@@ -31,9 +31,9 @@ function study(student) {
     student.fundamentalsProficiency = student.fundamentalsProficiency + student.workEthic;
 }
 
-var jack = makeTeacher("jack");
-var bob = makeStudent("bob", 10);
-var susan = makeStudent("susan", 12);
+let jack = makeTeacher("jack");
+let bob = makeStudent("bob", 10);
+let susan = makeStudent("susan", 12);
 teach(jack, bob);
 teach(jack, susan);
 doProject(bob);

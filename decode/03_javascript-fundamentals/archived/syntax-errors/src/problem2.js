@@ -1,4 +1,4 @@
-var myObj = {
+let myObj = {
 
     foo: "one",
     bar: "two",
@@ -19,7 +19,7 @@ var myObj = {
         // lots and lots of code
     },
 
-    varieties: function() {
+    letieties: function() {
         // lots and lots of code
     },
 

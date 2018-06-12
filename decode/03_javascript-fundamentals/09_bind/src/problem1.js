@@ -1,4 +1,4 @@
-var bob = {name: "Bob"};
+let bob = {name: "Bob"};
 function greet() {
     return "I'm " + this.name;
 }

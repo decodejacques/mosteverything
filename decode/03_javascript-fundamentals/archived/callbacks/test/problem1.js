@@ -1,7 +1,7 @@
-var expect = require('chai').expect;
+let expect = require('chai').expect;
 
-var farg;
-var targ;
+let farg;
+let targ;
 
 setTimeout = function(f, t) {
     farg = f;
@@ -9,7 +9,7 @@ setTimeout = function(f, t) {
     targ = t;
 }
 
-var greet = require('../../src/callbacks/problem1.js');
+let greet = require('../../src/callbacks/problem1.js');
 
 describe('callbacks', function() {
     it('it should shout after 1 second ', function() {

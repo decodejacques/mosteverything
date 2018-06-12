@@ -1,6 +1,6 @@
-var expect = require('chai').expect;
+let expect = require('chai').expect;
 
-var f = require('../src/problem1.js');
+let f = require('../src/problem1.js');
 
 describe('f', function() {
     it('returns 1 the first time', function() {

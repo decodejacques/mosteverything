@@ -1,16 +1,16 @@
-var express = require('express');
-var app = express();
-var fs = require('fs');
-var bodyParser = require('body-parser')
+let express = require('express');
+let app = express();
+let fs = require('fs');
+let bodyParser = require('body-parser')
 app.use(bodyParser.raw({ type: '*/*' }))
 
-var cookieMap = {}; // maps a session id to a username
+let cookieMap = {}; // maps a session id to a username
 
 app.post('/login', (req, res) => {
-    var loginInformation = JSON.parse(req.body.toString());
-    var usr = loginInformation.username;
-    var pwd = loginInformation.password;
-    var sessionId = "" + Math.floor(Math.random() * 1000000);
+    let loginInformation = JSON.parse(req.body.toString());
+    let usr = loginInformation.username;
+    let pwd = loginInformation.password;
+    let sessionId = "" + Math.floor(Math.random() * 1000000);
     
     if ((usr == "sue" && pwd == "romeo") ||
         (usr == "bob" && pwd == "juliet")) {
@@ -22,13 +22,13 @@ app.post('/login', (req, res) => {
     }
 })
 
-var m = {}
+let m = {}
 
 app.post('/counter', (req, res) => {
-    var cookieString = req.headers.cookie;
-    var cookieArray = cookieString.split('=');
-    var sessionId = cookieArray[1];
-    var usr = cookieMap[sessionId];    
+    let cookieString = req.headers.cookie;
+    let cookieArray = cookieString.split('=');
+    let sessionId = cookieArray[1];
+    let usr = cookieMap[sessionId];    
     console.log(cookieMap);
     if (m[usr] === undefined) {
         m[usr] = 0;

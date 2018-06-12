@@ -1,5 +1,5 @@
-var rootdiv = document.getElementById('root');
-var elem = React.createElement(
+let rootdiv = document.getElementById('root');
+let elem = React.createElement(
   'ul',
   null,
   React.createElement(

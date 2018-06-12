@@ -1,6 +1,6 @@
-var expect = require('chai').expect;
+let expect = require('chai').expect;
 
-var funcs = require('../../src/constructor-functions/problem1.js');
+let funcs = require('../../src/constructor-functions/problem1.js');
 
 describe('isNotEmpty', function() {
     it('returns false for empty arrays', function() {

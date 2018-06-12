@@ -1,16 +1,16 @@
-var html = `<html>
+let html = `<html>
 <body>
     <div id='somediv'></div>
     <script src='/somescript.js'></script>
 </body>
 </html>
 `;
-var javascript = `document.getElementById("somediv").innerText="success!";`;
+let javascript = `document.getElementById("somediv").innerText="success!";`;
 function process(httpRequest) {
-    var requestLines = httpRequest.split('\n');
-    var firstLine = requestLines.shift();
-    var elements = firstLine.split(' ');
-    var path = elements[1];
+    let requestLines = httpRequest.split('\n');
+    let firstLine = requestLines.shift();
+    let elements = firstLine.split(' ');
+    let path = elements[1];
     console.log(path);
     if(path === '/') {
         return makeResponse('text/html', html);
@@ -23,7 +23,7 @@ function process(httpRequest) {
 
 // IGNORE EVERYTHING AFTER THIS LINE!!!!!
 
-var net = require('net');
+let net = require('net');
 function makeResponse(contentType, x) {
     return `
 HTTP/1.1 200 OK
@@ -39,7 +39,7 @@ ${x}`
 function createServer(f) {
     net.createServer(function (sock) {
         sock.on('data', function (data) {
-            var httpResponse = f(data.toString());
+            let httpResponse = f(data.toString());
             if(!httpResponse) httpResponse = "";
             sock.write(httpResponse);
         });

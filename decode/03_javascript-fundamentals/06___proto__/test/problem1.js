@@ -1,8 +1,8 @@
-var expect = require('chai').expect;
+let expect = require('chai').expect;
 
 
 
-var objects = require('../src/problem1.js');
+let objects = require('../src/problem1.js');
 
 describe('__proto__', function() {
     it('The child should have the parent as its __proto__ ', function() {

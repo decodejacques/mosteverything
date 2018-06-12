@@ -1,7 +1,7 @@
-var net = require('net');
+let net = require('net');
 function makeRequest(addr, req, f) {
-    var client = new net.Socket();
-    var finalData = "";
+    let client = new net.Socket();
+    let finalData = "";
     client.connect(80, addr, function () {
         return client.write(req);
     });
@@ -29,6 +29,6 @@ function process(httpResponse) {
         console.log("the word is not the page");
     }
 }
-var httpRequest = generateHTTPRequest('www.nba.com', '/jordan/');
+let httpRequest = generateHTTPRequest('www.nba.com', '/jordan/');
 
 makeRequest("www.nba.com", httpRequest, process)

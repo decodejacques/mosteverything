@@ -1,6 +1,6 @@
-var expect = require('chai').expect;
+let expect = require('chai').expect;
 
-var greet = require('../src/problem2.js');
+let greet = require('../src/problem2.js');
 
 describe('bind', function() {
     it('the greet function should be bound to the dog', function() {

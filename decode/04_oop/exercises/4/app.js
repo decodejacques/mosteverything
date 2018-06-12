@@ -11,8 +11,8 @@ class div {
         this.children = children;
     }
     render() {
-        var ret = document.createElement("div");
-        for (var i = 0; i < this.children.length; i++) {
+        let ret = document.createElement("div");
+        for (let i = 0; i < this.children.length; i++) {
             ret.appendChild(this.children[i].render());
         }
         return ret;
@@ -24,7 +24,7 @@ class h1 {
         this.text = text;
     }
     render() {
-        var ret = document.createElement("h1");
+        let ret = document.createElement("h1");
         ret.innerText = this.text;
         return ret;
     }

@@ -10,11 +10,11 @@ function duplicateString(x) {
     return x.concat(x);
 }
 function reverseString(str) {
-  var splitString = str.split(""); // var splitString = "hello".split("");
+  let splitString = str.split(""); // let splitString = "hello".split("");
  
-    var reverseArray = splitString.reverse(); // var reverseArray = ["h", "e", "l", "l", "o"].reverse();
+    let reverseArray = splitString.reverse(); // let reverseArray = ["h", "e", "l", "l", "o"].reverse();
  
-    return reverseArray.join(""); // var joinArray = ["o", "l", "l", "e", "h"].join("");
+    return reverseArray.join(""); // let joinArray = ["o", "l", "l", "e", "h"].join("");
     
 }
 // Expand each of the following and get the result of the expression

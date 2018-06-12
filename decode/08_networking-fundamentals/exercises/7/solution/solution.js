@@ -1,4 +1,4 @@
-var HTMLBody = `<html>
+let HTMLBody = `<html>
     <body>
     <div id='somediv'></div>
     <script src='/somescript.js'></script>
@@ -9,24 +9,24 @@ var HTMLBody = `<html>
 
 
 function process(httpRequest) {
-    var lines = httpRequest.split('\n');
-    var statusLine = lines.shift();
-    var pathElements = statusLine.split(' ')
-    var path = pathElements[1];
+    let lines = httpRequest.split('\n');
+    let statusLine = lines.shift();
+    let pathElements = statusLine.split(' ')
+    let path = pathElements[1];
     if (path === '/') {
-        var response = makeResponse('text/html', HTMLBody);
+        let response = makeResponse('text/html', HTMLBody);
         return response;
     }
     if (path === '/somescript.js') {
-        var contents = 'document.getElementById("somediv").innerText="success!";'
-        var response = makeResponse('application/javascript', contents);
+        let contents = 'document.getElementById("somediv").innerText="success!";'
+        let response = makeResponse('application/javascript', contents);
         return response;
     }
 }
 
 // IGNORE EVERYTHING AFTER THIS LINE!!!!!
 
-var net = require('net');
+let net = require('net');
 function makeResponse(contentType, x) {
     return `
 HTTP/1.1 200 OK
@@ -42,7 +42,7 @@ ${x}`
 function createServer(f) {
     net.createServer(function (sock) {
         sock.on('data', function (data) {
-            var httpResponse = f(data.toString());
+            let httpResponse = f(data.toString());
             if (!httpResponse) httpResponse = "";
             sock.write(httpResponse);
         });

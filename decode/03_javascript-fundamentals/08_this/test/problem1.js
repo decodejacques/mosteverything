@@ -1,8 +1,8 @@
-var expect = require('chai').expect;
+let expect = require('chai').expect;
 
-var wmaa = require('../src/problem1.js');
+let wmaa = require('../src/problem1.js');
 
-var bob = {age: 24, wmaa};
+let bob = {age: 24, wmaa};
 
 describe('whatsMyAgeAgain', function() {
     it('returns 18 when this is undefined', function() {

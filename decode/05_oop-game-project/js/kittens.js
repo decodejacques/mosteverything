@@ -1,26 +1,26 @@
 // This sectin contains some game constants. It is not super interesting
-var GAME_WIDTH = 375;
-var GAME_HEIGHT = 500;
+let GAME_WIDTH = 375;
+let GAME_HEIGHT = 500;
 
-var ENEMY_WIDTH = 75;
-var ENEMY_HEIGHT = 156;
-var MAX_ENEMIES = 3;
+let ENEMY_WIDTH = 75;
+let ENEMY_HEIGHT = 156;
+let MAX_ENEMIES = 3;
 
-var PLAYER_WIDTH = 75;
-var PLAYER_HEIGHT = 54;
+let PLAYER_WIDTH = 75;
+let PLAYER_HEIGHT = 54;
 
 // These two constants keep us from using "magic numbers" in our code
-var LEFT_ARROW_CODE = 37;
-var RIGHT_ARROW_CODE = 39;
+let LEFT_ARROW_CODE = 37;
+let RIGHT_ARROW_CODE = 39;
 
 // These two constants allow us to DRY
-var MOVE_LEFT = 'left';
-var MOVE_RIGHT = 'right';
+let MOVE_LEFT = 'left';
+let MOVE_RIGHT = 'right';
 
 // Preload game images
-var images = {};
+let images = {};
 ['enemy.png', 'stars.png', 'player.png'].forEach(imgName => {
-    var img = document.createElement('img');
+    let img = document.createElement('img');
     img.src = 'images/' + imgName;
     images[imgName] = img;
 });
@@ -89,7 +89,7 @@ class Engine {
         this.setupEnemies();
 
         // Setup the <canvas> element where we will be drawing
-        var canvas = document.createElement('canvas');
+        let canvas = document.createElement('canvas');
         canvas.width = GAME_WIDTH;
         canvas.height = GAME_HEIGHT;
         element.appendChild(canvas);
@@ -116,9 +116,9 @@ class Engine {
 
     // This method finds a random spot where there is no enemy, and puts one in there
     addEnemy() {
-        var enemySpots = GAME_WIDTH / ENEMY_WIDTH;
+        let enemySpots = GAME_WIDTH / ENEMY_WIDTH;
 
-        var enemySpot;
+        let enemySpot;
         // Keep looping until we find a free enemy spot at random
         while (!enemySpot || this.enemies[enemySpot]) {
             enemySpot = Math.floor(Math.random() * enemySpots);
@@ -157,8 +157,8 @@ class Engine {
      */
     gameLoop() {
         // Check how long it's been since last frame
-        var currentFrame = Date.now();
-        var timeDiff = currentFrame - this.lastFrame;
+        let currentFrame = Date.now();
+        let timeDiff = currentFrame - this.lastFrame;
 
         // Increase the score!
         this.score += timeDiff;
@@ -209,5 +209,5 @@ class Engine {
 
 
 // This section will start the game
-var gameEngine = new Engine(document.getElementById('app'));
+let gameEngine = new Engine(document.getElementById('app'));
 gameEngine.start();

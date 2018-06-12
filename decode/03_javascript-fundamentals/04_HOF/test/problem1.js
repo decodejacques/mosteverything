@@ -1,13 +1,13 @@
-var expect = require('chai').expect;
+let expect = require('chai').expect;
 
-var funcs = require('../src/problem1.js');
-var callNoException =  funcs.callNoException;
-var callNoNull = funcs.callNoNull;
-var exceptionalize = funcs.exceptionalize; 
-var nullify = funcs.nullify;
-var map = funcs.map; 
-var filter = funcs.filter; 
-var every = funcs.every;
+let funcs = require('../src/problem1.js');
+let callNoException =  funcs.callNoException;
+let callNoNull = funcs.callNoNull;
+let exceptionalize = funcs.exceptionalize; 
+let nullify = funcs.nullify;
+let map = funcs.map; 
+let filter = funcs.filter; 
+let every = funcs.every;
 
 function throwsZero(x){
     if(x==0) throw new Error("woops");

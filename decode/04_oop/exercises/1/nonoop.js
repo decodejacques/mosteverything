@@ -52,9 +52,9 @@ function feedCat(person, cat) {
     }
 }
 
-var fido = makeDog("fido", "iams", "labrador", 4);
-var mittens = makeCat("mittens", "purina", 3);
-var bob = makePerson("bob", 2, 1);
+let fido = makeDog("fido", "iams", "labrador", 4);
+let mittens = makeCat("mittens", "purina", 3);
+let bob = makePerson("bob", 2, 1);
 
 catAnimalSound(mittens);
 dogAnimalSound(fido);

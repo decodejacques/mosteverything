@@ -7,8 +7,8 @@ class App extends Component {
     this.state = {};
   }
   submit = () => {
-    var usr = this.username.value;
-    var pwd = this.password.value;
+    let usr = this.username.value;
+    let pwd = this.password.value;
     this.name = usr;
     console.log("the username", this.name);
     console.log("username", usr);

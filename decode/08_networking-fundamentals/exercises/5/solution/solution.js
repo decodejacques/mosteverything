@@ -1,7 +1,7 @@
-var net = require('net');
+let net = require('net');
 function makeRequest(addr, req, f) {
-    var client = new net.Socket();
-    var finalData = "";
+    let client = new net.Socket();
+    let finalData = "";
     client.connect(80, addr, function () {
         return client.write(req);
     });
@@ -15,7 +15,7 @@ function makeRequest(addr, req, f) {
 
 
 //The following string *MUST* end with 2 newlines
-var http_request =
+let http_request =
     `GET /index.html HTTP/1.1
 host: www.dolekemp96.com
 Connection: close
@@ -25,12 +25,12 @@ Connection: close
 // IGNORE EVERYTHING BEFORE THIS LINE
 
 function process(httpResponse) {
-    var lines = httpResponse.split('\n');
-    for(var i = 0; i < 11; i++) {
+    let lines = httpResponse.split('\n');
+    for(let i = 0; i < 11; i++) {
         lines.shift();
     }
-    var numChars = 0;
-    for(var i = 0; i < lines.length; i++) {
+    let numChars = 0;
+    for(let i = 0; i < lines.length; i++) {
         numChars = numChars + lines[i].length + 1;
     }
     console.log("The number of characters on the page is " + numChars);

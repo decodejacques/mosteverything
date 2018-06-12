@@ -3,7 +3,7 @@ class h1 {
         this.text = text;
     }
     render() {
-        var ret = document.createElement("h1");
+        let ret = document.createElement("h1");
         ret.innerText = this.text;
         return ret;
     }
@@ -14,7 +14,7 @@ class h2 {
         this.text = text;
     }
     render() {
-        var ret = document.createElement("h2");
+        let ret = document.createElement("h2");
         ret.innerText = this.text;
         return ret;
     }
@@ -25,7 +25,7 @@ class h3 {
         this.text = text;
     }
     render() {
-        var ret = document.createElement("h3");
+        let ret = document.createElement("h3");
         ret.innerText = this.text;
         return ret;
     }
@@ -37,8 +37,8 @@ class div {
         this.children = children;
     }
     render() {
-        var ret = document.createElement("div");
-        for (var i = 0; i < this.children.length; i++) {
+        let ret = document.createElement("div");
+        for (let i = 0; i < this.children.length; i++) {
             ret.appendChild(this.children[i].render());
         }
         return ret;

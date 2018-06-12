@@ -1,9 +1,9 @@
-var expect = require('chai').expect;
+let expect = require('chai').expect;
 
-var funcs = require('../src/problem1.js');
-var first = funcs.first;
-var detective = funcs.detective;
-var assignFlight = funcs.assignFlight;
+let funcs = require('../src/problem1.js');
+let first = funcs.first;
+let detective = funcs.detective;
+let assignFlight = funcs.assignFlight;
 describe('first', function() {
     it('throws an exception on an empty array', function() {
         expect(() => first([])).to.throw()

@@ -1,4 +1,4 @@
-var HTMLBody = `<html>
+let HTMLBody = `<html>
 <head>
   <link rel="stylesheet" type="text/css" href="/mystyle.css">
 </head>
@@ -8,7 +8,7 @@ var HTMLBody = `<html>
 </html>
     `;
 
-var css = `div {
+let css = `div {
     height:3em;
     cursor: pointer;
     width:auto;
@@ -61,23 +61,23 @@ var css = `div {
 
 function process(httpRequest) {
     console.log(httpRequest);
-    var lines = httpRequest.split('\n');
-    var statusLine = lines.shift();
-    var pathElements = statusLine.split(' ')
-    var path = pathElements[1];
+    let lines = httpRequest.split('\n');
+    let statusLine = lines.shift();
+    let pathElements = statusLine.split(' ')
+    let path = pathElements[1];
     if (path === '/') {
-        var response = makeResponse('text/html', HTMLBody);
+        let response = makeResponse('text/html', HTMLBody);
         return response;
     }
     if (path === '/mystyle.css') {
-        var response = makeResponse('text/css', css);
+        let response = makeResponse('text/css', css);
         return response;
     }
 }
 
 // IGNORE EVERYTHING AFTER THIS LINE!!!!!
 
-var net = require('net');
+let net = require('net');
 function makeResponse(contentType, x) {
     return `
 HTTP/1.1 200 OK
@@ -93,7 +93,7 @@ ${x}`
 function createServer(f) {
     net.createServer(function (sock) {
         sock.on('data', function (data) {
-            var httpResponse = f(data.toString());
+            let httpResponse = f(data.toString());
             if (!httpResponse) httpResponse = "";
             sock.write(httpResponse);
         });

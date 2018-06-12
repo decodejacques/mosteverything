@@ -1,6 +1,6 @@
-var seed = 1;
+let seed = 1;
 function random() {
-    var x = Math.sin(seed++) * 10000;
+    let x = Math.sin(seed++) * 10000;
     return x - Math.floor(x);
 }
 
@@ -8,7 +8,7 @@ function rand(n) {
     return Math.floor(random() * n)
 }
 
-var words = ["Abibliophobia", "Absquatulate", "Allegator", "Anencephalous", "Argle", "Batrachomyomachy", "Billingsgate", "Bloviate", "Blunderbuss", "Borborygm", "Boustrophedon", "Bowyang", "Brouhaha", "Bumbershoot", "Callipygian", "Canoodle", "Cantankerous", "Catercornered", "Cockalorum", "Cockamamie", "Codswallop", "Collop", "Collywobbles", "Comeuppance", "Crapulence", "Crudivore", "Discombobulate", "Donnybrook", "Doozy", "Dudgeon", "Ecdysiast", "Eructation", "Fard", "Fartlek", "Fatuous"]
+let words = ["Abibliophobia", "Absquatulate", "Allegator", "Anencephalous", "Argle", "Batrachomyomachy", "Billingsgate", "Bloviate", "Blunderbuss", "Borborygm", "Boustrophedon", "Bowyang", "Brouhaha", "Bumbershoot", "Callipygian", "Canoodle", "Cantankerous", "Catercornered", "Cockalorum", "Cockamamie", "Codswallop", "Collop", "Collywobbles", "Comeuppance", "Crapulence", "Crudivore", "Discombobulate", "Donnybrook", "Doozy", "Dudgeon", "Ecdysiast", "Eructation", "Fard", "Fartlek", "Fatuous"]
 
 
 
@@ -17,11 +17,11 @@ function randomWord() {
 }
 
 function generateRandomPaths(n) {
-    var ret = [];
-    var seen = {}
-    var r = Math.floor(random() * words.length);
+    let ret = [];
+    let seen = {}
+    let r = Math.floor(random() * words.length);
     while (ret.length < n) {
-        var r = randomWord()
+        let r = randomWord()
         if (!(r in seen)) {
             seen[r] = true;
             ret.push(r);
@@ -77,7 +77,7 @@ for (let i = 0; i < randos.length; i++) {
 const express = require('express')
 const app = express()
 
-var bodyParser = require('body-parser')
+let bodyParser = require('body-parser')
 app.use(bodyParser.raw({ type: '*/*' }))
 
 

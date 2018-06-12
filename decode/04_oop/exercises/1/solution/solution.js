@@ -68,9 +68,9 @@ class Person {
 
 
 
-var fido = new Dog("fido", "iams", "labrador", 4);
-var mittens = new Cat("mittens", "purina", 3);
-var bob = new Person("bob", 2, 1);
+let fido = new Dog("fido", "iams", "labrador", 4);
+let mittens = new Cat("mittens", "purina", 3);
+let bob = new Person("bob", 2, 1);
 
 mittens.animalSound();
 fido.animalSound();

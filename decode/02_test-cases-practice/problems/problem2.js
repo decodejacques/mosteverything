@@ -1,4 +1,4 @@
-var assert = require('assert');
+let assert = require('assert');
 
 // we need 5 test cases.
 let inputs = [
@@ -15,8 +15,8 @@ function f(str) {
 }
 
 function runTest(i) {
-    var expected = outputs[i];
-    var actual = f(inputs[i]);
+    let expected = outputs[i];
+    let actual = f(inputs[i]);
     assert.deepEqual(actual, expected);
 }
 

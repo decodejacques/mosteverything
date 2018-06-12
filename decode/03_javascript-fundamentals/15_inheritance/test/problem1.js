@@ -1,13 +1,13 @@
-var expect = require('chai').expect;
+let expect = require('chai').expect;
 
-var classes = require('../src/problem1.js');
+let classes = require('../src/problem1.js');
 
-var Shape = classes.Shape;
-var Rectangle = classes.Rectangle;
-var Square = classes.Square;
+let Shape = classes.Shape;
+let Rectangle = classes.Rectangle;
+let Square = classes.Square;
 
-var s = new Square(5);
-var r = new Rectangle(10, 4);
+let s = new Square(5);
+let r = new Rectangle(10, 4);
 
 describe('Rectangle', function() {
     it('Seeing how a rectangle converts to a string', function() {
