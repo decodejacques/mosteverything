@@ -7,9 +7,9 @@
     <script src="output.js"></script>
     <script>
         function test() {
-            var root = document.getElementById('root');
+            let root = document.getElementById('root');
             try {
-                var s = root.children[0].innerText.trim();
+                let s = root.children[0].innerText.trim();
                 if (s !== 'hello world') {
                     root.innerText = "There is a mistake in your input.js file"
                 } else {
