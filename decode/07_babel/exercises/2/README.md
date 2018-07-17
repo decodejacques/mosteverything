@@ -1,5 +1,5 @@
 ## Description
-Rewrite the the following into JSX. Save it as input.js and run `npm build`. then open the index.html file.
+Rewrite the the following into JSX. Save it as input.js and run `npm run build`. then open the index.html file.
 
 ```
 var rootdiv = document.getElementById('root');
