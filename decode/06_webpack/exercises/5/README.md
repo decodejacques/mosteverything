@@ -16,3 +16,6 @@ Here are some functions that you will need to use
 document.getElementById
 React.createElement
 ReactDOM.render
+
+import React from 'react'
+import ReactDOM from 'react-dom'
