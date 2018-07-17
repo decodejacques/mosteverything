@@ -1,4 +1,6 @@
 ## Description
+Start by running `npm install`
+
 Rewrite the the following into JSX. Save it as input.js and run `npm run build`. then open the index.html file.
 
 ```
