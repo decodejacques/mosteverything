@@ -25,7 +25,8 @@ Connection: close
 // IGNORE EVERYTHING BEFORE THIS LINE
 
 function process(httpResponse) {
-   /// your code here
+   // your code here
+   // hint: use the debugger to inspect the string refered to by httpResponse
 }
 
 makeRequest("www.dolekemp96.org", http_request, process);
