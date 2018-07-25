@@ -25,15 +25,7 @@ Connection: close
 // IGNORE EVERYTHING BEFORE THIS LINE
 
 function process(httpResponse) {
-    let lines = httpResponse.split('\n');
-    for(let i = 0; i < 11; i++) {
-        lines.shift();
-    }
-    let numChars = 0;
-    for(let i = 0; i < lines.length; i++) {
-        numChars = numChars + lines[i].length + 1;
-    }
-    console.log("The number of characters on the page is " + numChars);
+   /// your code here
 }
 
 makeRequest("www.dolekemp96.org", http_request, process);
